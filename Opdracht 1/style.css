@@ -1,0 +1,38 @@
+
+body {
+    margin: 40px;
+    max-width: 1150px;
+
+}
+
+header {
+    background-color: #ffcc00;
+    widows: 100%;
+}
+
+.headbounce {
+display: inline-block;
+  height: 200px;
+  width: 200px;
+  font-size: 1px;
+  padding: 1px;
+  color: white;
+  margin-right: 5px;
+  margin-left: 5px;
+  animation: roll 1s infinite;
+  transform: rotate(30deg);
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+header {
+    float: left;
+}

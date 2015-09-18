@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+
+    <title>Frontend | Formulierpagina</title>
+
+    <meta name="description" content="Formulierpagina van de eerste les van het vak FrontEnd aan CMD, Amsterdam">
+
+   <!-- Style sheet -->
+    <link href="style.css" rel="stylesheet" media="all">
+
+</head>
+<body>
+
+  <header>
+        <nav role="navigation">
+            <ul class="navbar">
+                <li><a href="artikelpagina.html">Artikelpagina</a></li>
+                <li><a href="formulierpagina.html">Formulierpagina</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main role="main">
+    <article>
+       <section>
+            <h1>Aanmelden</h1>
+
+                <p>Bent u geïnteresseerd in samenwerken met CMD Amsterdam? Dat kan! Tijdens de opleiding werken studenten aan projecten voor echte opdrachtgevers. Ook lopen de studenten stage, in het tweede en afstudeerjaar. </p>
+
+                <p><em>CMD Amsterdam zoekt altijd naar positieve verbindingen met de creatieve stadAmsterdam.</em></p>
+
+                <p>Voor het aanmelden van stageplekken of projecten kunt u onderstaand formulier invullen. Wij nemen zo nodig contact met u op nadat het formulier is verstuurd. Voor vragen of opmerkingen kunt u <a href="#">contact</a> met ons op.</p>
+
+        </section>
+            <form>
+               <fieldset>
+                   <legend>Contactgegevens</legend>
+                        <label>Naam<input type="text"></label>
+                        <label>Bedrijf<input type="text"></label>
+                        <label>Adres<input type="text"></label>
+                        <label>Postcode<input type="pattern"></label>
+                        <label>Plaats<input type="text"></label>
+                        <label>Telefoon<input type="tel"></label>
+                        <label>Email<input type="email"></label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Ik wil mij aanmelden:</legend>
+                        <select>
+                            <option>Voor een project</option>
+                            <option>Als stagebedrijf</option>
+                        </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Project</legend>
+                        <label>Titel<input type="text"></label>
+                        <label>Opdrachtomschrijving<input type="text"></label>
+                        <label>Doelstelling/Intentie van het project:<input type="text"></label>
+                        <label>Looptijd:<input type="text"></label>
+                        <label>Deadline:<input type="date"></label>
+
+                    <legend>Geschikt voor:</legend>
+                        <select>
+                            <option>Eerstejaars studenten</option>
+                            <option>Tweedejaars studenten</option>
+                            <option>Derdejaars studenten</option>
+                            <option>Afstudeer studenten</option>
+                            <option>Onbekend</option>
+                        </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Stage</legend>
+                       <legend>Geschikt voor:</legend>
+                        <select>
+                            <option>Tweedejaars studenten</option>
+                            <option>Afstudeer studenten</option>
+                            <option>Onbekend</option>
+                        </select>
+                        <legend>Hoelang duurt de stage?</legend>
+                        <select>
+                            <option>10 weken</option>
+                            <option>20 weken</option>
+                        </select>
+                        <label>Begin Datum<input type="date"></label>
+                        <label>Beschrijving werkzaamheden<input type="text"></label>
+
+                        <legend>Beschrijving StagebedrijfL</legend>
+                        <label>Bedrijfsnaam<input type="text"></label>
+                        <label>Adres<input type="text"></label>
+                        <label>Postcode<input type="pattern"></label>
+                        <label>Plaats<input type="text"></label>
+                        <label>Sector<input type="text"></label>
+                        <label>Core Business<input type="text"></label>
+
+                </fieldset>
+
+
+                <input type="submit" value="Go!">
+            </form>
+
+    </article>
+    </main>
+</body>
+</html>
