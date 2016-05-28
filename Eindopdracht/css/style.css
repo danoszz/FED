@@ -1,0 +1,1378 @@
+/* Thanks to http://easings.net/ for the CSS transitions used in this stylesheet */
+/* Copyright 2015 Daan van der Zwaag */
+
+body {
+
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #595959;
+
+}
+
+body > *:not(header) {
+
+    display: flex;
+    padding: 8%;
+    flex-wrap: nowrap;
+
+    }
+
+body > main, aside {
+
+    flex-direction: row;
+
+}
+
+/* Basic typographic styling */
+
+p {
+
+    font-size: .9em;
+
+}
+
+h2 {
+
+    text-transform: uppercase;
+    font-weight: 300;
+
+}
+
+h2 + p {
+
+    font-weight: 700;
+    margin-bottom: 2em;
+    line-height: 1.6em;
+
+}
+
+h3 {
+
+    font-weight: 400;
+
+}
+
+a {
+    color: #407BFF;
+    text-decoration: none
+
+}
+
+a:hover {
+
+    color: #147ECC;
+    transition: color .3s ease;
+
+}
+
+img {
+
+    width: 100%;
+    height: auto;
+
+}
+
+/* Basic CSS classes */
+
+.hide {
+
+    display: none;
+
+}
+
+.show {
+
+    display: block;
+
+}
+
+/* HEADER STYLING */
+
+
+body > header {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #ffcc00;
+    padding: 0.5% 2.5%;
+    border-bottom: 4px solid #595959;
+    box-shadow: 0 4px 12px #aaa;
+
+}
+
+body > header > nav {
+
+    display: none;
+
+}
+
+body > header > img {
+
+    width: 35%;
+    height: 20%;
+    margin-top: 2.5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.5%;
+
+}
+
+body > header > form {
+
+    display: none;
+
+}
+
+body > header > h1 {
+
+    display: none;
+
+}
+
+body > header > p:nth-child(2) {
+
+    display: none;
+
+}
+
+body > header > p.to-profile {
+
+    display: none; <!--- Sorry Elena --->
+
+}
+
+body > header > nav > ul {
+
+    list-style: none;
+    padding: 0;
+
+
+}
+
+body > header > nav > ul > li{
+
+    display: inline-block;
+    padding: 2%;
+
+}
+
+
+body > header > nav > ul > li > a {
+
+    color: #595959;
+    font-size: 0.9em;
+    text-decoration: none;
+    transition: color .3s ease;
+    text-transform: uppercase;
+
+}
+
+body > header > nav > ul > li > a:hover {
+
+    color: white;
+    transition: color .3s ease;
+
+}
+
+/* Flexbox nav + search. Many thanks to mynameisnick.com! */
+
+/* small resets */
+
+input,button {
+
+    font: inherit;
+
+}
+
+button {
+
+    cursor: pointer;
+
+}
+
+
+/* Search in Navigation */
+
+
+.nav-search {
+
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 1.8rem;
+    color: #6d6d6d;
+    background-color: #fff;
+    border: solid 2px #fff;
+    border-radius: 2px;
+    line-height: 16px;
+    box-shadow: none;
+
+}
+
+.nav-search:focus {
+
+    outline: none;
+    margin: 0;
+    border: solid 2px #6d6d6d;
+    width: 97.5%;
+    border-radius: 2px;
+    line-height: 16px;
+
+}
+
+::-webkit-input-placeholder {
+    color: #999;
+    font-size: 0.8em;
+    padding: 2%;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: text-indent 0.5s 0.5s ease;
+  text-indent: -100%;
+  opacity: 1;
+}
+
+
+/* RELATED STYLING */
+
+.related {
+
+    display: block;
+    background-color: #f2f2f2;
+
+}
+
+.articleslider {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: auto;
+    margin-left: -2.5%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    /* white-space: nowrap; */
+    box-sizing: border-box;
+
+    }
+
+body > section > h2 {
+
+        width: 100%;
+    }
+
+
+body > section > div > article {
+
+    background-color: white;
+    padding: 5%;
+    border-radius: 2px;
+    margin: 2%;
+    width: 102.5%;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+
+}
+
+
+body > section > div > article:hover {
+
+
+
+    box-shadow: 0px 1px 4px  rgba(0,0,0,0.3);
+    transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
+
+}
+
+body > section > div > article > header > h3 {
+
+        color: #ffcc00;
+        font-size: 0.9em;
+
+    }
+body > section > div > article > header > h3:hover {
+
+        color: #595959;
+        transition: color .3s ease;
+
+    }
+
+body > section > div > article > header > p  {
+
+        font-size: 0.8em;
+
+    }
+
+body > section > div > article > header > p:nth-child(2) {
+
+        font-style: italic;
+
+    }
+
+body > section > div > article > p {
+
+    font-size: 0.8em;
+
+    }
+
+
+/* RELATED FORMPAGE STYLING */
+
+.formpagerelated {
+
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.formpagerelated > article {
+
+    width: 100%;
+    background-color: white;
+    padding: 5%;
+    border-radius: 2px;
+    margin-bottom: 5%;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+
+}
+
+dl {
+
+    font-size: 0.9em;
+
+}
+
+dt {
+
+    float: inherit;
+    clear: left;
+    width: 20%;
+    text-align: left;
+    font-weight: 600;
+    color: #ffcc00;
+
+  }
+
+dt:after {
+
+    content: ":";
+
+  }
+
+dd {
+
+    margin: 0 0 0 20%;
+    padding: 0 0 0.5em 0;
+    font-weight: 300;
+
+  }
+
+/* ASIDE STYLING */
+
+body > aside {
+
+    flex-wrap: wrap;
+
+}
+
+body > aside > section > article > p  {
+
+    font-weight: 300;
+
+}
+
+body > aside > section:nth-child(1) {
+
+    background-color: #f2f2f2;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    border-radius: 2px;
+
+}
+
+body > aside > section:nth-child(1) > h2 {
+
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+
+body > aside > section:nth-child(1) > h2 > a {
+
+    color: #595959;
+
+}
+
+body > aside > section:nth-child(1) > article {
+
+    background-color: white;
+    border-radius: 2px;
+    padding: 2.5%;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    margin-bottom: 5%;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 2px solid #ffcc00;
+
+}
+
+
+body > aside > section:nth-child(2) {
+
+    background-color: #f2f2f2;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    border-radius: 2px;
+    margin-top: 15%;
+
+}
+
+body > aside > section:nth-child(2) > article {
+
+    border-bottom: 2px solid #ffcc00;
+    background-color: white;
+    border-radius: 2px;
+    padding: 5%;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    margin-bottom: 7.5%;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+body > aside > section:nth-child(2) > h2 {
+
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+body > aside > section:nth-child(2) > h2 > a {
+
+    color: #595959;
+}
+
+body > aside > section:nth-child(2) > article > h3 {
+
+    color: #ffcc00;
+
+}
+
+body > aside > section:nth-child(2) > article > h3:hover {
+
+    color: #595959;
+    transition: color .3s ease;
+}
+
+/* FOOTER STYLING */
+
+body > footer {
+
+    display: flex;
+    flex-direction: row;
+    background-color: #333;
+    font-size: 0.8em;
+    flex-wrap: wrap;
+    color: #888;
+
+}
+
+#sitemap {
+
+    display: none;
+
+}
+
+#sitemap a {
+
+    color: #888;
+    text-decoration: none;
+
+}
+
+#search {
+
+    display: none;
+}
+
+#about {
+
+    display: none;
+
+}
+
+#credits {
+
+    padding-right: 2.5%;
+}
+
+#feedback > a {
+
+    float: left;
+    padding: 5%;
+    border: 2px solid #ffcc00;
+    border-radius: 2px;
+    background: #ffcc00;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0.8
+
+}
+
+#feedback > a:hover {
+
+    background: white;
+    color: #ffcc00;
+    opacity: 1;
+    transition: all 600ms cubic-bezier(0.895, 0.03, 0.685, 0.22);
+
+}
+
+/* Video */
+
+video {
+
+    width: 100%;
+    height: auto;
+
+}
+
+
+/* Picture Overlay thanks to: http://tympanus.net/codrops/2014/06/19/ideas-for-subtle-hover-effects/ */
+
+.itemgrid {
+
+    text-align: center;
+
+}
+.grid {
+
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around;
+
+}
+
+/* Common style */
+.grid figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 2.5%;
+    width: 100%;
+    background: #ffcc00;
+    text-align: center;
+    cursor: pointer;
+}
+
+.grid figure img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+    opacity: 0.8;
+}
+
+.grid figure figcaption {
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+    pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+
+.grid figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+}
+
+.grid figure h2 {
+    word-spacing: -0.15em;
+    font-weight: 800;
+}
+
+.grid figure h2 span {
+    font-weight: 300;
+}
+
+.grid figure h2,
+.grid figure p {
+    margin: 0;
+}
+
+.grid figure p {
+    letter-spacing: 1px;
+    font-size: 68.5%;
+}
+
+/* Chico */
+
+figure.effect-chico img {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(1.12);
+    transform: scale(1.12);
+}
+
+figure.effect-chico:hover img {
+    opacity: 0.5;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+}
+
+
+figure.effect-chico figcaption::before {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    border: 1px solid #fff;
+    content: '';
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+figure.effect-chico figcaption::before,
+figure.effect-chico p {
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-chico h2 {
+    padding: 20% 0 20px 0;
+}
+
+figure.effect-chico p {
+    margin: 0 auto;
+    max-width: 70%;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+figure.effect-chico:hover figcaption::before,
+figure.effect-chico:hover p {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+ body > section > div > figure > figcaption > p:nth-child(3) {
+
+        display: none;
+    }
+
+/* Form styling*/
+
+fieldset {
+
+    display: flex;
+    border: 0;
+    margin-top: 40px;
+    margin-left: -12px;
+    flex-flow: nowrap;
+}
+
+legend {
+
+    font-size: 1.4em;
+    font-weight: 500;
+    margin-left: -3px;
+
+}
+
+fieldset > label > span + input,textarea {
+
+    padding: .5em .6em;
+    margin: .4em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 2px;
+    vertical-align: middle;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+      -webkit-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    width: 100%;
+
+}
+
+input:focus {
+
+    background-color: #fbfbfb;
+
+}
+
+input[type="radio"] + span {
+
+    text-align: left;
+    margin-left: 0.25em;
+
+}
+
+label {
+
+    font-size: 0.8em;
+
+}
+
+form {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+body > main > form > fieldset:nth-child(1) {
+
+    width: 100%;
+
+}
+
+body > main > form > fieldset:nth-child(2) {
+
+    width: 100%;
+
+}
+
+form > fieldset > legend {
+
+    margin-bottom: 20px;
+
+}
+
+form > fieldset > label > span {
+
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+    width: 10em;
+    margin: 0 1em 0 0;
+}
+
+fieldset > fieldset > label > span {
+
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+    width: 10em;
+    margin: 0 1em 0 0;
+}
+
+form > fieldset > label > em {
+
+    display: none;
+
+}
+
+.hidden {
+
+    display: none;
+
+}
+
+#project {
+
+    width: 100%;
+
+}
+
+#stage {
+
+    width: 100%;
+
+}
+
+body > main > form > input[type="submit"] {
+
+    margin-top: 10%;
+    width: 100%;
+    padding: 15px 40px;
+    margin: 80px 0px 40px 0px;
+    text-decoration: none;
+    color: #ffcc00;
+    background-color: #fff;
+    border: 2px solid #ffcc00;
+    border-radius: 2px;
+    box-shadow: none;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 600;
+
+}
+
+body > main > form > input[type="submit"]:hover {
+
+    color: #fff;
+    background-color: #ffcc00;
+    transition: all 600ms cubic-bezier(0.895, 0.03, 0.685, 0.22);
+
+}
+
+  input:required:invalid, input:focus:invalid {
+    background-image: url(../img/hateorglory.png);
+    background-position: right top;
+    background-repeat: no-repeat;
+    -moz-box-shadow: none;
+  }
+  input:required:valid {
+    background-image: url(../img/gimmelove.png);
+    background-position: right top;
+    background-repeat: no-repeat;
+  }
+
+
+
+
+.formpage {
+
+        flex-direction: column;
+
+}
+
+/* RANDOM CLASSES */
+
+script {
+
+    display: none !important;
+
+}
+
+/* New Overlay Menu */
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255,204,0,0.9);
+    display: block;
+    padding: 0;
+}
+
+/* Overlay closing cross */
+
+.overlay .overlay-close {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    overflow: hidden;
+    border: none;
+    background: url(../img/cross.png) no-repeat center center;
+    text-indent: 200%;
+    color: transparent;
+    outline: none;
+    z-index: 100;
+
+}
+
+/* Menu style */
+
+.overlay nav {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    height: 60%;
+    font-size: 54px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    height: 100%;
+    position: relative;
+}
+
+.overlay ul li {
+    display: block;
+    height: 20%;
+    height: calc(100% / 5);
+    min-height: 54px;
+}
+
+.overlay ul li a {
+    font-weight: 300;
+    display: block;
+    color: #fff;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.overlay ul li a:hover,
+.overlay ul li a:focus {
+    color: #fff4c8;
+}
+
+/* Effects */
+
+.overlay-hugeinc {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+    transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+.overlay-hugeinc.open {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+
+.overlay-hugeinc nav {
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+}
+
+.overlay-hugeinc nav ul {
+    opacity: 0.4;
+    -webkit-transform: translateY(-25%) rotateX(35deg);
+    transform: translateY(-25%) rotateX(35deg);
+    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.overlay-hugeinc.open nav ul {
+    opacity: 1;
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+
+.overlay-hugeinc.close nav ul {
+    -webkit-transform: translateY(25%) rotateX(-35deg);
+    transform: translateY(25%) rotateX(-35deg);
+}
+
+@media screen and (max-height: 30.5em) {
+    .overlay nav {
+        height: 70%;
+        font-size: 2em;
+    }
+    .overlay ul li {
+        min-height: 34px;
+    }
+}
+
+@media screen and (max-width: 37.5em) {
+    .overlay nav {
+        height: 40%;
+    }
+    .overlay ul li {
+        font-size:  0.6em;
+    }
+}
+
+/* Menu Button Styling */
+
+.nav-button {
+
+
+    bottom: 25px;
+    right: 25px;
+    z-index: 1000;
+    width: 48px;
+    height: 48px;
+    padding: 2%;
+    border-radius: 24px;
+    background-image: url('../img/hamburger.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+
+}
+
+#trigger-overlay {
+
+    display: block;
+    position: absolute;
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    width: 55px;
+    height: 55px;
+    background-color: #ffcc00;
+    font: inherit;
+    font-size: 0;
+    text-indent: -9999px;
+    border-radius: 27.5px;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+    cursor: pointer;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: 0px 0px 34px -9px rgba(0,0,0,0.9);
+    position: fixed;
+    outline: none;
+
+}
+
+/* Media queries */
+
+
+@media screen and (min-width: 58em)  {
+
+    body > header {
+
+        flex-direction: row;
+
+    }
+
+    body > header > nav {
+
+
+        display: inline-block;
+        width: 80%;
+  }
+
+    body > header > nav > ul {
+
+        display: flex;
+        justify-content: center;
+
+    }
+
+    body > header > img {
+
+        width: 12.5%;
+        margin: 0;
+
+    }
+
+
+    body > header > form {
+
+        display: block;
+
+    }
+
+
+    body > header > nav > ul > li > a {
+
+      font-size: 0.8em;
+      padding: 0;
+      line-height: 1em;
+
+  }
+
+
+    .nav-form {
+
+        flex: none;
+
+  }
+
+    .nav-search {
+
+        width: 180px;
+        transition: width 0.3s;
+        line-height: 16px;
+        height: 2rem;
+
+  }
+
+    .nav-search:focus {
+
+        width: 290px;
+        line-height: 0.8rem;
+        height: 2rem;
+
+  }
+
+    main > article {
+
+        max-width: 48em;
+        margin: auto;
+
+    }
+
+
+    .related > section {
+        widows: 20%;
+
+    }
+
+    header > h1 {
+
+        display: none;
+
+    }
+
+    aside > section {
+
+        padding: 0 5%;
+
+    }
+
+
+    .formpage {
+
+        max-width: 48em;
+        margin: auto;
+
+    }
+
+    .related {
+
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+
+    }
+
+    .articleslider {
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+
+
+        }
+
+    body > section > div > article {
+
+    padding: 1.5%;
+    border-radius: 2px;
+    width: 30rem;
+    margin: 2%;
+    width: 12rem;
+    display: inline-block;
+
+
+    }
+
+    body > section > div > article:nth-child(5) {
+
+    margin-right: 0;
+
+    }
+
+    body > aside {
+
+        flex-wrap: nowrap;
+    }
+
+
+    body > aside > section:nth-child(1) {
+
+        flex-basis: 75%;
+        margin-right: 4%;
+        padding: 2%;
+        margin-top: 0;
+
+    }
+
+    body > aside > section:nth-child(1) > h2 {
+
+        margin-bottom: 2.5%;
+        text-align: left;
+
+}
+    body > aside > section:nth-child(1) > article {
+
+        width: 95%;
+        margin-bottom: 2.5%;
+
+    }
+
+    body > aside > section:nth-child(1) > article:nth-child(6) {
+
+        margin-bottom: 0.5%;
+
+    }
+
+
+    body > aside > section:nth-child(2) {
+
+        flex-basis: 25%;
+        padding: 2%;
+        margin-top: 0;
+
+    }
+
+    body > footer {
+
+        justify-content: center;
+        flex-wrap: nowrap;
+
+    }
+
+    footer > section {
+
+        width: 30em;
+        padding-left: 2.5%;
+
+
+    }
+
+    #feedback {
+
+        flex-basis: 20em;
+
+    }
+
+    #feedback > a {
+
+        width: 85%;
+    }
+
+    #sitemap {
+
+        display: block;
+
+    }
+
+    #trigger-overlay {
+
+        display: none !important;
+
+    }
+
+    dt {
+        float: left;
+
+    }
+
+    .grid figure {
+
+        width: 45%;
+
+    }
+
+    form > fieldset > label > span {
+
+    text-align: right;
+
+    }
+
+    fieldset > fieldset > label > span {
+
+    text-align: right;
+
+    }
+
+    fieldset > label > span + input,textarea {
+
+        width: inherit;
+
+    }
+
+    span + input,textarea {
+
+        width: inherit;
+
+    }
+
+    body > main > form > fieldset:nth-child(1) {
+    width: 50%;
+
+    }
+
+    #project {
+
+    width: 50%;
+
+    }
+
+    #stage {
+
+        width: 40%;
+
+    }
+
+
+}
+
+@media screen and (max-width: 30em) {
+    .content {
+        padding: 0 10px;
+        text-align: center;
+    }
+    .grid figure {
+        display: inline-block;
+        float: none;
+        margin: 10px auto;
+        width: 100%;
+    }
+
+    body > section > div > figure > figcaption > h2 > span {
+
+        display: none;
+
+    }
+
+     body > section > div > figure > figcaption > p {
+
+        display: none;
+
+    }
+
+     body > section > div > figure > figcaption > p:nth-child(3) {
+
+         display: block;
+         font-size: 1em;
+         font-weight: 300;
+    }
+
+
+}
+
+@media screen and (max-width: 70em) {
+
+
+    body > header > nav > ul > li{
+
+    padding: 1.5%;
+
+}
+
+    .nav-search:focus {
+
+    width: 180px;
+    height: 2rem;
+    line-height: 0.8em;
+
+    }
+}

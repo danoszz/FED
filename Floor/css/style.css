@@ -1,0 +1,635 @@
+/* Made by Floortje Koster. Thanks to easings.net for the transitions. Other copyrights are inside the code */
+
+body {
+
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    color: #333333;
+    background-color: #fff;
+    overflow-x: hidden;
+
+}
+
+/* Typografie */
+
+p {
+
+    line-height: 140%
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+
+}
+
+a:hover {
+
+    color: #2980b9
+
+}
+
+body > div > main, header, article, section, footer, aside {
+
+    font-size: 0.9em;
+
+
+}
+
+/* Header styling */
+
+
+body > header {
+
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 20%;
+    height: 100%;
+    padding: 2%;
+    background-color: #7aba84;
+
+}
+
+body > header > h1 {
+
+    font-size: 1em;
+    margin: 5px 0px 0px 0px ;
+    color: white;
+    text-transform: uppercase;
+
+}
+
+body > header > p:nth-child(2) {
+
+    font-size: 0.8em;
+
+}
+
+body > header > p.to-profile {
+
+    text-decoration: none;
+    transition: color .3s ease;
+    font-size: 0.8em;
+    text-align: center;
+
+}
+
+body > header > p.to-profile > a {
+
+    color: white;
+
+}
+
+body > header > p.to-profile > a:hover {
+
+    color: #595959;
+
+}
+
+body > header > img {
+
+    width: 100%;
+    height: auto;
+
+}
+
+
+body > header > nav > ul {
+
+    list-style: none;
+    padding: 0;
+
+
+}
+
+body > header > nav > ul > li > a {
+
+    color: #595959;
+    line-height: 2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color .3s ease;
+
+}
+
+body > header > nav > ul > li > a:hover {
+
+    color: white;
+    transition: color .3s ease;
+
+}
+
+
+/* Main Styling */
+
+body > div > main  {
+
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 20%;
+    margin-right: auto;
+    padding: 5%;
+
+}
+
+body > div > main > article {
+
+    width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+
+}
+
+.main-area {
+
+    width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+img {
+
+    width: 100%;
+    height: auto;
+
+}
+
+video {
+
+    width: 100%;
+    height: auto;
+
+}
+/* Related Styling */
+
+
+.related  {
+
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 20%;
+    margin-right: auto;
+    padding: 5%;
+
+}
+
+.related-area {
+
+    width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.related-area > article {
+
+    margin-bottom: 5%;
+    padding: 5%;
+    background-color: #f2f2f2;
+    border-radius: 2px;
+    width: 100%;
+}
+
+/* Aside Styling */
+
+aside {
+
+    width: 70%;
+    margin-left: 20%;
+    margin-right: auto;
+    padding: 5%;
+
+}
+
+.aside-area {
+
+    display: flex;
+    flex-direction: row;
+    width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+body > div > aside > div > section > article {
+
+    margin-bottom: 5%;
+    padding: 5%;
+    background-color: #f2f2f2;
+    border-radius: 2px;
+}
+
+/* Aside Styling | Laatste mededelingen */
+
+body > div > aside > div > section:nth-child(1) {
+
+
+
+}
+
+/* Aside Styling | Uitagenda */
+
+body > div > aside > div > section:nth-child(2) {
+
+    margin-left: 5%;
+
+}
+
+/* Footer | Sitemap / Contact / Credits / About / Feedback */
+
+body > div > footer {
+
+    display: flex;
+    flex-direction: row;
+    margin-left: 20%;
+    padding: 1%;
+    background: #1f1f1f;
+
+}
+
+.footer-area {
+
+    display: flex;
+    width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+
+}
+
+
+footer > div > section {
+
+    color: #a1a1a1;
+    padding-right: 5%;
+
+}
+
+footer > div > section > a > h2 {
+
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 0.9em;
+
+}
+
+#sitemap {
+
+    order: -1;
+
+}
+
+#sitemap > ul {
+
+    display: none;
+
+}
+
+#contact {
+
+    order: 1;
+}
+
+#contact > p {
+
+    display: none;
+
+}
+
+#search {
+
+    display: none;
+
+}
+
+#about {
+
+    display: none;
+
+}
+
+#credits {
+
+    text-align: center;
+    order: 0;
+
+}
+
+#credits > h2 {
+
+    display: none;
+
+}
+
+#credits > p {
+
+    font-weight: 300;
+    font-size: 0.9em;
+
+}
+
+/* Credits Floating Feebback button: http://alexpeattie.com/projects/feedback_button/ */
+
+#feedback {
+  height: 10em;
+  position: fixed;
+  top: 70%;
+  z-index: 999;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+}
+
+#feedback a {
+  display: block;
+  background: #7aba84;
+  height: 30px;
+  width: 70px;
+  padding: 8px 16px;
+  color: #fff;
+  font-size: 0.9em;
+  text-decoration: none;
+  border-radius: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#feedback a:hover {
+  background: #ffcc00;
+  transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+
+
+/* Styling search form header */
+
+body > header > form {
+
+    margin: 20px 0px 20px 0px;
+
+}
+
+body > header > form > label > input[type="search"] {
+
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    border-color: #fff;
+    border-width: 2px 2px 0px 2px;
+    border-style: solid;
+    font-size: 12px;
+    font-weight: 100;
+    letter-spacing: 0px;
+    text-transform: none;
+    padding: 10px;
+    margin-top: 10px;
+    height: 50px;
+
+}
+
+
+body > header > form > button {
+
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ffcc00;
+    border: 2px solid #fff;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    height: 50px;
+    width: 100%;
+
+}
+
+/* Nav hide on big screen */
+
+
+.navigation {
+
+    display: none;
+
+}
+
+/* Responsiveness | Media Queries */
+
+@media (max-width: 56em) {
+
+    /* Navigation Menu - Background Thanks to: http://www.sitepoint.com/pure-css-off-screen-navigation-menu/ */
+
+    .navigation {
+      /* critical sizing and position styles */
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      display: block;
+
+      /* non-critical appearance styles */
+      list-style: none;
+      background: #7aba84;
+        margin: 0;
+    }
+
+
+    /* Navigation Menu - List items */
+    .nav-item {
+      /* non-critical appearance styles */
+      width: 200px;
+      border-top: 1px solid #111;
+      border-bottom: 1px solid #000;
+    }
+
+    .nav-item a {
+      /* non-critical appearance styles */
+      display: block;
+      padding: 1em;
+      color: white;
+      transition: color 0.2s, background 0.5s;
+    }
+
+    .nav-item a:hover {
+
+      color: #ffcc00;
+
+    }
+
+
+
+    /* Site Wrapper - Everything that isn't navigation */
+    .site-wrap {
+      /* Critical position and size styles */
+      min-height: 100%;
+      min-width: 100%;
+      background-color: white; /* Needs a background or else the nav will show through */
+      position: relative;
+      top: 0;
+      bottom: 100%;
+      left: 0;
+      z-index: 1;
+    }
+
+    /* Nav Trigger */
+    .nav-trigger {
+      /* critical styles - hide the checkbox input */
+      position: absolute;
+      clip: rect(0, 0, 0, 0);
+    }
+
+    label[for="nav-trigger"] {
+      /* critical positioning styles */
+      position: fixed;
+      left: 15px; top: 15px;
+      z-index: 2;
+
+      /* non-critical apperance styles */
+      height: 30px;
+      width: 30px;
+      cursor: pointer;
+      background-image: url("../img/burgerswagger.png");
+      background-size: contain;
+    }
+
+    /* Make the Magic Happen */
+    .nav-trigger + label, .site-wrap {
+      transition: left 0.2s;
+    }
+
+    .nav-trigger:checked + label {
+      left: 215px;
+    }
+
+    .nav-trigger:checked ~ .site-wrap {
+      left: 200px;
+      box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+    }
+
+    /* ---- Rest Responsive --- */
+
+    body > header {
+
+        display: none;
+    }
+
+    body > div > main {
+
+        margin-left: 0;
+        flex-direction: inherit;
+        width: inherit;
+        padding: 7.5%;
+
+    }
+
+    .main-area {
+
+        margin-left: 0;
+        flex-direction: inherit;
+        width: inherit;
+        padding: 7.5%;
+
+    }
+
+
+
+    .related {
+
+        margin-left: 0;
+        flex-direction: inherit;
+        width: inherit;
+        padding: 7.5%;
+
+    }
+
+    aside {
+
+        margin-left: 0;
+        flex-direction: inherit;
+        width: inherit;
+        padding: 7.5%;
+
+    }
+
+    .aside-area {
+
+        flex-direction: column;
+        width: inherit;
+
+    }
+
+    .related-area > article {
+
+        width: initial;
+
+    }
+
+    body > div > aside > div > section > article {
+
+        width: initial;
+
+    }
+
+
+    body > div > aside > div > section:nth-child(2) {
+
+        margin-left: 0;
+
+
+    }
+
+
+    body > div > main > article {
+
+        margin-top: 5%;
+
+    }
+
+    body > div > footer {
+
+        margin-left: initial;
+        padding-left: 3%;
+        padding-right: 3%;
+
+    }
+
+}
+
+
+
+@media (max-width: 25em) {
+
+    .site-wrap {
+
+        font-size: 1.2em;
+
+    }
+
+    footer {
+
+        font-size: initial;
+        padding: 5%;
+
+    }
+
+    #feedback {
+
+        display: none;
+
+    }
+
+
+
+}
+

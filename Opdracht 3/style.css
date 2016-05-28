@@ -8,18 +8,104 @@ body {
     -webkit-font-smoothing: antialiased;
     color: #595959;
 
+}
+
+body > main, header, article, section, footer {
+
+    font-size: 0.9em
 
 }
 
-main {
+body > main /* Aanmelden */ {
 
-    width: 90%;
-    margin: 0 3%;
-    margin-top: 50px;
+    width: 30%;
+    margin-left: 21%;
+    float: left;
+    position: relative;
+}
+
+
+
+body > header {
+    margin: 0 auto;
+    height: 100%;
+    width: 20%;
+    background-color: #ffcc00;
+    padding: 3%;
+    -webkit-box-shadow: 0 5px 10px #aaa;
+    -moz-box-shadow: 0 5px 10px #aaa;
+    box-shadow: 0 5px 10px #aaa;
+    box-sizing: border-box;
+    float: left;
+    position: fixed;
+    vertical-align: top;
+    top: 0;
+}
+
+
+body > header > img {
+
+    width: 100%;
 
 }
 
-article {
+body > section /* Meer lezen / Voorbeeld projecten */ {
+
+    float: left;
+    margin-left: 1%;
+    width: 20%;
+    height: 230vh;
+    overflow-y: auto;
+    margin-bottom: 40px;
+
+}
+
+body > aside > section:nth-child(1) /* Laatste Mededelingen */ {
+
+    float: left;
+    margin-left: 1%;
+    width: 15%;
+}
+
+body > aside > section:nth-child(2) /* Agenda */ {
+
+    float: left;
+    margin-right: 1%;
+    width: 10%;
+
+}
+
+body > footer {
+    box-sizing: border-box;
+    clear: both;
+    float: right;
+    position: relative;
+    margin-left: 20%;
+    padding: 1%;
+    background: #1f1f1f;
+
+}
+
+footer > section > h2 {
+    color: #fff;
+
+}
+
+footer > section {
+
+    float: left;
+    margin-right: 5%;
+
+}
+
+footer > section:nth-child(4) {
+
+    position: absolute;
+    margin-top: 35%;
+    margin-left: 29%;
+}
+
+/* article {
 
     max-width: 30em;
     margin: auto;
@@ -27,7 +113,9 @@ article {
 
 }
 
-/* Child selectors and sibling combinators */
+
+
+/* Child selectors and sibling combinators
 
 article > section > h2 {
 
@@ -75,7 +163,7 @@ a:hover {
 }
 
 
-/* Special Attribute Selector: verandert tijdelijk niet linkende <a> met het symbool # naar de tekst "deadlink" */
+/* Special Attribute Selector: verandert tijdelijk niet linkende <a> met het symbool # naar de tekst "deadlink"
 
 
 a[href*="#"] > span {
@@ -87,9 +175,9 @@ a[href*="#"]:after {
     content: " *deadlink*";
     color: #c0392b;
 
-}
+}  */
 
-/* Form styling*/
+/* Form styling
 
 fieldset {
 
@@ -139,53 +227,6 @@ label {
 
 }
 
-form > fieldset > legend {
-
-    margin-bottom: 20px;
-
-}
-
-
-form > fieldset:nth-child(3) > legend:nth-child(7) { /* Select smaller font */
-
-    font-size: 1.1em;
-    font-weight: 500;
-}
-
-form > fieldset:nth-child(4) > legend:nth-child(3) { /* Select smaller font */
-
-    font-size: 1.1em;
-    font-weight: 500;
-}
-
-
-form > fieldset:nth-child(4) > legend:nth-child(3) { /* De derde legend "Hoelang duurt de stage */
-
-    margin-top: 40px;
-
-}
-
-form > fieldset:nth-child(4) > select:nth-child(4) { /* De select '10 of 20 weken' */
-
-    display: block;
-    margin-bottom: 20px;
-}
-
-
-
-/* Styling Header */
-
-header {
-    height: 50px;
-    margin: 0 auto;
-    background-color: #ffcc00;
-    padding: 40px;
-    border-bottom: 4px solid #595959;
-    -webkit-box-shadow: 0 5px 10px #aaa;
-    -moz-box-shadow: 0 5px 10px #aaa;
-    box-shadow: 0 5px 10px #aaa;
-}
-
 
 nav {
 
@@ -224,7 +265,7 @@ nav a.active {
 }
 
 
-/* Styling H1 in header. Source underline effect: http://callmenick.com/post/simple-css3-transitions-transforms-animations-compilation */
+/* Styling H1 in header. Source underline effect: http://callmenick.com/post/simple-css3-transitions-transforms-animations-compilation
 
 .pagetitle {
     float: left;
@@ -265,7 +306,7 @@ nav a.active {
 }
 
 
-/* Button */
+/* Button
 
 .button {
 
@@ -295,23 +336,11 @@ nav a.active {
 
 }
 
-/* Alignment */
+/* Alignment
 
 .align-right {
 
     float: right
 
 }
-
-/* Responsiveness */
-
-@media only screen (max-device-width : 768px)
-
-{
-    .pagetitle {
-
-        background-color: purple;
-
-}
-
-}
+*/

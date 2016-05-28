@@ -1,0 +1,466 @@
+/* Thanks to http://easings.net/ for the CSS transitions used in this stylesheet */
+/* Copyright 2015 Daan van der Zwaag */
+
+body {
+
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #595959;
+
+}
+
+body > *:not(header) {
+
+    display: flex;
+    padding: 4%;
+    flex-wrap: nowrap;
+
+    }
+
+body > main, aside {
+
+    flex-direction: row;
+
+}
+
+body > footer {
+
+    display: flex;
+    flex-direction: row;
+    background-color: #444;
+    font-size: 0.8em;
+
+}
+
+
+
+#sitemap a {
+
+    color: white;
+    text-decoration: none;
+
+}
+
+
+p {
+
+    font-size: 0.9em;
+
+}
+
+
+h2 + p {
+
+    font-weight: 700;
+    margin-bottom: 2em;
+
+}
+
+a {
+    color: #407BFF;
+    text-decoration: none
+
+}
+
+a:hover {
+
+    color: #147ECC;
+    transition: color .3s ease;
+
+}
+
+
+/* Flexbox nav + search. Many thanks to mynameisnick.com! */
+
+/* small resets */
+
+input,button {
+
+    font: inherit;
+    border-radius: none;
+    box-shadow: none;
+    appearance: none;
+
+}
+
+button {
+
+    cursor: pointer;
+
+}
+
+/* nav container */
+
+body > header > nav {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* nav links */
+
+.menu-items {
+
+    display: none;
+    flex: 1;
+    flex-direction: column;
+    list-style: none;
+    margin: 0 0 4px 0;
+    padding: 4px;
+    text-align: center;
+    transition: color 0.1s linear;
+
+}
+
+.menu-items--visible {
+
+    display: flex;
+
+}
+
+
+body > header > nav > ul > li:last-child {
+
+    border-bottom: 0;
+
+}
+
+body > header > nav > ul > li > a {
+
+    display: block;
+
+}
+
+
+
+/* nav toggle */
+
+.menu-toggle {
+
+    margin: 0 0 4px 0;
+    padding: 4px;
+    color: #fff;
+    background-color: #ffcc00;
+    border: 1px solid #fff;
+
+}
+
+.menu-toggle:hover, .menu-toggle:focus {
+
+    outline: none;
+    background-color: white;
+    color: #ffcc00;
+
+}
+
+/* nav form */
+
+.nav-form {
+
+    height: 2rem;
+
+}
+
+.nav-search {
+
+    display: block;
+    margin: 0;
+    padding: 1%;
+    width: 97.5%;
+    height: 1.8rem;
+    color: #6d6d6d;
+    background-color: #fff;
+    border: solid 2px #fff;
+    border-radius: 2px;
+    line-height: 40%;
+
+}
+
+.nav-search:focus {
+
+    outline: none;
+    border: solid 2px #6d6d6d;
+    width: 97.5%;
+    border-radius: 2px;
+    line-height: 40%;
+
+
+}
+
+::-webkit-input-placeholder {
+    color: #999;
+    font-size: 0.8em;
+    padding: 2%;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: text-indent 0.5s 0.5s ease;
+  text-indent: -100%;
+  opacity: 1;
+}
+
+/* header styling */
+
+
+body > header {
+
+    height: 10%;
+    margin: 0 auto;
+    background-color: #ffcc00;
+    padding: 3%;
+    border-bottom: 4px solid #595959;
+    -webkit-box-shadow: 0 5px 10px #aaa;
+    -moz-box-shadow: 0 5px 10px #aaa;
+    box-shadow: 0 5px 10px #aaa;
+
+
+}
+
+body > header > img {
+
+    width: 50%;
+    height: 20%;
+
+}
+
+
+body > header > h1 {
+
+    font-size: 1em;
+    margin: 5px 0px 0px 0px ;
+    color: white;
+    text-transform: uppercase;
+    order: 2;
+
+}
+
+body > header > p:nth-child(2) {
+
+    display: none;
+
+}
+
+body > header > p.to-profile {
+
+    text-decoration: none;
+    transition: color .3s ease;
+    font-size: 0.8em;
+    text-align: center;
+    order: 4;
+    display: none; <!--- Sorry Elena --->
+
+}
+
+body > header > p.to-profile > a {
+
+    color: white;
+
+}
+
+body > header > p.to-profile > a:hover {
+
+    color: #595959;
+
+}
+
+
+body > header > nav > ul {
+
+    list-style: none;
+    padding: 0;
+
+
+}
+
+body > header > nav > ul > li{
+
+    display: inline-block;
+    padding: 2%;
+
+
+}
+
+
+body > header > nav > ul > li > a {
+
+    color: #595959;
+    font-size: 0.9em;
+    text-decoration: none;
+    transition: color .3s ease;
+
+}
+
+body > header > nav > ul > li > a:hover {
+
+    color: white;
+    transition: color .3s ease;
+
+}
+
+
+/* Special Attribute Selector: verandert tijdelijk niet linkende <a> met het symbool # naar de tekst "deadlink"
+
+
+a[href="#"] > span {
+        display: none;
+}
+
+a[href="#"]:after {
+
+    content: " *deadlink*";
+    color: #c0392b;
+
+}
+
+*/
+
+/* Styling H1 . Source underline effect: http://callmenick.com/post/simple-css3-transitions-transforms-animations-compilation */
+
+body > header > h1 {
+
+    margin: 0px 0px 10px 0px ;
+    color: white;
+    text-transform: uppercase;
+
+}
+
+body > header > h1:after {
+
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  width: 0;
+  height: 5px;
+  background-color: white;
+    box-shadow: 2px 2px 2px #595959;
+  content: "";
+  -webkit-transition: all 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+
+body > header > h1:hover {
+
+    text-shadow: 2px 2px 2px #595959;
+    -moz-transform: skew(-10deg, 0deg);
+    -webkit-transform: skew(-10deg, 0deg);
+    -o-transform: skew(-10deg, 0deg);
+    -ms-transform: skew(-10deg, 0deg);
+    transform: skew(-10deg, 0deg);
+    -webkit-transition: all 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+
+
+
+/* media queries */
+
+@media all and (min-width: 55em) {
+
+    body > header > nav {
+
+      flex-direction: row;
+      align-items: center;
+
+  }
+
+    body > header > img {
+
+        width: 12%;
+        height: auto;
+        margin: auto;
+        float: left;
+
+    }
+
+  .menu-items {
+
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    height: 1em;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+    body > header > nav > ul > li {
+
+    margin-right: 4px;
+    border-bottom: none;
+
+  }
+
+    body > header > nav > ul > li > a {
+
+      font-size: 0.8em;
+      padding: 0;
+      line-height: 1em;
+
+  }
+
+    .menu-toggle {
+
+        display: none;
+
+  }
+
+    .nav-form {
+
+        flex: none;
+
+  }
+
+    .nav-search {
+
+        width: 180px;
+        transition: width 0.3s;
+        line-height: 70%;
+        height: 2rem;
+
+  }
+
+    .nav-search:focus {
+
+        width: 290px;
+        height: 2rem;
+
+  }
+
+    main > article {
+
+        max-width: 48em;
+        margin: auto;
+
+    }
+
+    footer > section {
+
+        width: 20%;
+
+    }
+
+    .related > section {
+        widows: 20%;
+
+    }
+
+    header > h1 {
+
+        display: none;
+
+    }
+
+    aside > section {
+
+        padding: 0 5%;
+
+    }
+}
